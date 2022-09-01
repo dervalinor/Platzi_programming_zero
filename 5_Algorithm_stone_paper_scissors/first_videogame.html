@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+
+  <head>
+    <meta charset="utf-8"> 
+    <title>My first videogame</title>     
+    <link  rel = "icon" href="https://i.imgur.com/qTAJfv6.jpg">
+    <link rel = "stylesheet" type = "text/css" href = "../style/style.css" >
+
+    <script> 
+      //Algorithm of stone, paper or scissors
+      //you will assign a number for each thing
+      //1 stone, 2 paper and 3 scissors
+      let player = 0;
+      let pc = 2;
+
+      player = prompt("1. stone, 2. paper, 3. scissors. Choose: ");
+      //fix you should create program where show the option choose for
+      //you and pc, after who is won (player == option_n && pc == option_m)
+      if(player == 1){
+        alert("You lose");
+      } else if(player == pc){
+        alert("You tie");
+      } else if(player == 3){
+        alert("You won");
+      } else {
+        alert("Error, no exist this option");
+      }
+
+    </script>
+
+  </head>
+
+
+
+  <body>
+    <h1>Algorithm of stone, paper or scissors</h1>
+  </body>
+
+
+
+</html>
