@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+
+  <head>
+    <meta charset="utf-8"> 
+    <title>Mokepon</title>     
+    <link  rel = "icon" href="https://i.imgur.com/qTAJfv6.jpg"> 
+    <link rel = "stylesheet" type = "text/css" href = "../style/style.css"> 
+
+    <script src="js/videogame.js"></script> <!--we must wait for the browser to
+    load the entire web to run this file, then we must listen the event of 
+    load the entire web-->  
+  </head>
+
+
+  <body>
+    <!-- Document Object Model - DOM </h1>
+    
+      DOM - form how the browser to structure the tabs of 
+      html.
+      Javascript recognize the browser as windows and each tag as document
+      (all html)
+
+      - if a button we give clip to this event we can link a function 
+      this is called event listener or when the website change when it is
+      in pc or android.
+    
+      Problem 
+
+      create a videogame with creatures with power of fire, water and earth
+      called mokepon
+  
+    -->
+    
+    <div>
+      <h1>Mokepon! </h1> <!--h1 only use one time in htmh1 only use one time in
+      html -->
+      <!--Now we are goint to write attacking powers, 
+      select pets and its attacking power, use tag section
+      for divide the website in sections-->
+      
+      <!--distinguish each section use the attribute id 
+      create a count of life of the pet and when life = 0 then 
+      lost game
+      -->
+      <section id = "selection_pet">
+        <h2>Choose your pet: </h2>
+        
+        <!--Pets of the videogame: Hipodoge (water), Capipepo(Earth), Ratigueya
+          (fire), langostelvis (water and fire), Tucapalma (Water and earth),
+          pydos (Earth and fire). we use the tags input for selection of pets -->
+          
+          <!--Exist various types of input: text, password, radio, checkbox,
+            button, color, email, file, hidden, image, number, date, etc. create this
+            input use the attribute type -->
+
+            <label for="hipodoge">Hipodoge </label><!--Indicator selection -->
+            <input type = "radio" name = "pets" id = "hipodoge"> <!--we use to select our pet -->
+            <label for="capipepo">Capipepo</label> <!--attribute for="" allow to link a label
+            with a inputi, the when user will make click in the name of pet
+            select this pet-->
+            <input type = "radio" name = "pets" id = "capipepo"> <!--name - group inputs and only we can
+            select a input --> 
+            <label for="ratigueya">Ratigueya</label>
+            <input type = "radio" name = "pets" id = "ratigueya"> <!--Now we give a id for
+            identify each input and the pet -->
+
+            <button id = "boton-pets">Select</button> <!--id use to identify
+            button and after select with Javascript -->
+      </section>
+      <section id = "selection_power"> 
+
+        <p>Your pet have <span>3</span> lifes</p> <!--The lifes change according to the
+        combat becauce it is dynamic use tag span, modify with Javascript -->
+        <p>The enemy pet have <span>3<span> lifes </p>
+
+        <h2>Choose your attacking: </h2>
+        <p>
+          <button id = "boton-fire">Fire</button>
+          <button id = "boton-water">Water</button>
+          <button id = "boton-earth">Earth</button>
+        </p>
+      </section>
+
+      <!--Show the process of the battle -->
+      <section id = "message">
+        <!--fire defeat to the earth and water defeat to the fire -->
+        <p>Your pet attack with FIRE, your enemy pet attack with FIRE, then
+        your won </p> <!-- modify with Javascript -->
+      </section>
+
+      <!--Next of the end the game -->
+      <section id = "reboot_game">
+        <button id = "boton-reboot">Reboot</button>
+      </section>
+
+    </div>
+    
+
+  </body>
+
+
+
+</html>
