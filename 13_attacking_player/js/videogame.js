@@ -83,5 +83,4 @@ function selectionRandom(min, max){
 }
 
 
-
 window.addEventListener('load', startgame); 
