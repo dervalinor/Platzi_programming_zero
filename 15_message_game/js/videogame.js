@@ -1,11 +1,12 @@
 /*
-Create a function for selection random of power of the 
-enemy
-*/
+Create a message in the document html about the power of the player and 
+the enemy and indicate the winner
 
-let attackingPlayer; //the global variable we can read from console
-//only we can the name of the variable
+  */
+
+let attackingPlayer; 
 let attackingEnemy;
+
 
 function startgame(){
   let buttonPet;
@@ -23,23 +24,23 @@ function startgame(){
 
 function attackingFire(){
   attackingPlayer = "FIRE"; 
-  alert("Your attacking is " + attackingPlayer);
-  alert("Attacking enemy is " + attackingRandom());
+  //show the player attack
+  //No use innerHTML, it is best Document.createElement - create 
+  //elements in HTML by tagNAme
+  //show the enemy attack
+  attackingRandom()
 }
 
 function attackingWater(){
   attackingPlayer = "WATER";
-  alert("Your attacking is " + attackingPlayer);
-  alert("Attacking enemy is " + attackingRandom());
+  attackingRandom()
 }
 
 function attackingEarth(){
   attackingPlayer = "EARTH";
-  alert("Your attacking is " + attackingPlayer);
-  alert("Attacking enemy is " + attackingRandom());
+  attackingRandom()
 }
 
-//assign a each power a numbers: 1 -> fire, 2 -> water, 3 -> eath
 function attackingRandom(){
   let power_random = selectionRandom(1, 3);
   if(power_random == 1){
@@ -50,7 +51,15 @@ function attackingRandom(){
     attackingEnemy = "EARTH";
   }
   
-  return attackingEnemy;
+  //message of enemy power
+  showEnemyPower();
+}
+
+function showPowerEnemy(){
+  //here we use the method of manipulate DOM document.createElement() 
+  let message_power = document.createElement('p'); //tag name of the element html
+  // remember that symbol "+" for concatenate elements
+  message_power.innerHTML = "Your pet attack with " + attackingPlayer + ", your enemy pet attack with " + attackingEnemy +  ", then your won";//add new content to the element html
 }
 
 
