@@ -1,7 +1,5 @@
 /*
-Create a message in the document html about the power of the player and 
-the enemy and indicate the winner
-
+create logic to indicate whether the player wins, loses or draws
   */
 
 let attackingPlayer; 
@@ -24,10 +22,6 @@ function startgame(){
 
 function attackingFire(){
   attackingPlayer = "FIRE"; 
-  //show the player attack
-  //No use innerHTML, it is best Document.createElement - create 
-  //elements in HTML by tagNAme
-  //show the enemy attack
   attackingRandom();
 }
 
@@ -51,25 +45,31 @@ function attackingRandom(){
     attackingEnemy = "EARTH";
   }
   
-  //message of enemy power
-  showPowerEnemy();
+  combat_pets();
 }
 
-function showPowerEnemy(){
-  //first we need to select the element html where we want to insert the 
-  //new element
+function show_message(winner){
   let section_message = document.getElementById("message");
-  //here we use the method of manipulate DOM document.createElement() 
-  let message_power = document.createElement('p'); //tag name of the element html
-  // remember that symbol "+" for concatenate elements
-  message_power.innerHTML = "Your pet attack with " + attackingPlayer + ", your enemy pet attack with " + attackingEnemy;//add new content to the element html
-
-  //indicate the place where the message must show, then we use the 
-  //method called appendChild() - insert html elements to insert 
-  //to elements to javascript
+  let message_power = document.createElement('p'); 
+  message_power.innerHTML = "Your pet attack with " + attackingPlayer + ", your enemy pet attack with " + attackingEnemy + winner;
   section_message.appendChild(message_power); 
 }
 
+function combat_pets(){
+  //change numbers to name of powers
+  //1 -> fire, 2 -> water, 3 -> fire
+
+  //call function show_message
+   if(attackingPlayer == attackingEnemy){
+      show_message(" you tied");
+   } else if((attackingPlayer == "FIRE" && attackingEnemy == "EARTH") || (attackingPlayer == "WATER" && attackingEnemy == "FIRE") || (attackingPlayer
+   == "EARTH" && attackingEnemy == "WATER")){
+      show_message(" you won");
+   } else {
+      show_message(" you lose");
+   }
+  
+}
 
 function selectionPetPlayer(){
 

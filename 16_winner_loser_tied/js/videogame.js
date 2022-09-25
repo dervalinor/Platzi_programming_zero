@@ -1,7 +1,5 @@
 /*
-Create a message in the document html about the power of the player and 
-the enemy and indicate the winner
-
+create logic to indicate whether the player wins, loses or draws
   */
 
 let attackingPlayer; 
@@ -24,10 +22,6 @@ function startgame(){
 
 function attackingFire(){
   attackingPlayer = "FIRE"; 
-  //show the player attack
-  //No use innerHTML, it is best Document.createElement - create 
-  //elements in HTML by tagNAme
-  //show the enemy attack
   attackingRandom();
 }
 
@@ -51,25 +45,51 @@ function attackingRandom(){
     attackingEnemy = "EARTH";
   }
   
-  //message of enemy power
   showPowerEnemy();
 }
 
 function showPowerEnemy(){
-  //first we need to select the element html where we want to insert the 
-  //new element
   let section_message = document.getElementById("message");
-  //here we use the method of manipulate DOM document.createElement() 
-  let message_power = document.createElement('p'); //tag name of the element html
-  // remember that symbol "+" for concatenate elements
-  message_power.innerHTML = "Your pet attack with " + attackingPlayer + ", your enemy pet attack with " + attackingEnemy;//add new content to the element html
+  let message_power = document.createElement('p'); 
+  //insert variable or function where show whether the player wins, loses or draws
+  message_power.innerHTML = "Your pet attack with " + attackingPlayer + ", your enemy pet attack with " + attackingEnemy + " and your: " + who_win();
 
-  //indicate the place where the message must show, then we use the 
-  //method called appendChild() - insert html elements to insert 
-  //to elements to javascript
   section_message.appendChild(message_power); 
 }
 
+//function to know if the player wins, loses or draws
+function who_win(){
+    //1 -> fire, 2 -> water, 3 -> earth
+    //convert power to numbers
+    let player = convert_power(attackingPlayer);
+    let enemy = convert_power(attackingEnemy);
+    let result;
+
+   if(player == enemy){
+      result = "You tied";
+   } else if((player == 1 && enemy == 3) || (player == 2 && enemy == 1) || (player
+   == 3 && enemy == 2)){
+     result = "You won";
+   } else {
+     result = "You lose";
+   }
+  
+  return result;
+}
+
+function convert_power(a){
+    let fire = "FIRE", water = "WATER", earth = "EARTH";
+    let power_number;
+    if(a.localeCompare(fire) == 0){
+      power_number = 1;
+    } else if(a.localeCompare(water) == 0){
+      power_number = 2;
+    } else if(a.localeCompare(earth) == 0){
+      power_number = 3;
+    }
+
+    return power_number;
+}
 
 function selectionPetPlayer(){
 
