@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+
+  <head>
+    <meta charset="utf-8"> 
+    <title>Mokepon</title>     
+    <link  rel = "icon" href="https://i.imgur.com/qTAJfv6.jpg"> 
+    <link rel = "stylesheet" type = "text/css" href = "../style/style.css"> 
+    <script src="js/videogame.js"></script> 
+
+  </head>
+
+
+  <body>
+    
+    <div>
+      <h1>Mokepon! </h1> 
+
+      <section id = "selection_pet">
+        <h2>Choose your pet: </h2>
+        
+
+            <label for="hipodoge">Hipodoge </label>
+            <input type = "radio" name = "pets" id = "hipodoge"> 
+            <label for="capipepo">Capipepo</label> 
+            <input type = "radio" name = "pets" id = "capipepo"> 
+            <label for="ratigueya">Ratigueya</label>
+            <input type = "radio" name = "pets" id = "ratigueya"> 
+            <button id = "boton-pets">Select</button> 
+      </section>
+      <section id = "selection_power"> 
+
+
+        <h2>Choose your attacking: </h2>
+        <!--Create life counter -->
+          <p>Your pet <span id = "pet_player"></span> have <span
+            id="lifes_player">3</span>
+           lifes </p>  
+          <p>Your enemy selected <span id = "pet_enemy"></span>
+           have <span id="lifes_enemy">3</span> lifes</p>  
+        <p>
+          <button id = "boton-fire">Fire</button>
+          <button id = "boton-water">Water</button>
+          <button id = "boton-earth">Earth</button>
+        </p>
+      </section>
+
+      <section id = "message">
+      </section>
+
+      <section id = "reboot_game">
+        <button id = "boton-reboot">Reboot</button>
+      </section>
+
+    </div>
+    
+
+  </body>
+
+</html>
