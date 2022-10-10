@@ -1,0 +1,23 @@
+/*To start in css we are going to change the color of the title. 
+
+css structure
+
+name_selector {
+ property: value;
+}
+
+there are different types of selectors such as by type, by class and by id.
+
+
+
+*/
+
+/*selector by type: it is the same name as the html tag */
+h1 {
+  color: #C493FF;
+}
+
+/*class selector uses the class attribute and the class name */
+.pet {
+  color: #FFC75F;
+}
