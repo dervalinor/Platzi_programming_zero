@@ -21,3 +21,10 @@ h1 {
 .pet {
   color: #FFC75F;
 }
+
+/*selector by id */
+#choose_pet {
+  color: #F9F871;
+}
+
+/*to learn css visit: cssreference.oi */

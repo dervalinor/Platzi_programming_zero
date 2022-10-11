@@ -2,6 +2,9 @@
 javascript we can hide elements and show them when needed
 
 hide powers section and reboot game and only show it when selecting a pet
+once the pet is selected hide this section and once the 
+attack section is selected also hide.
+
 
 */
 let attackingPlayer; 
@@ -34,6 +37,7 @@ function startgame(){
 }
 
 function attackingFire(){
+
   attackingPlayer = "FIRE"; 
   attackingRandom();
 }
@@ -75,12 +79,16 @@ function show_winner(winner){
   section_message.appendChild(message_power); 
   
   //disable all button of power
+  //Why when I lose I get the restart button ????
   let button_fire = document.getElementById("boton-fire");
   button_fire.disabled = true;
   let button_water = document.getElementById("boton-water");
   button_water.disabled = true;
   let button_earth = document.getElementById("boton-earth");
   button_earth.disabled = true;
+  //show button reboot game
+  let sectionReboot = document.getElementById("reboot_game");
+  sectionReboot.style.display = "block";
 
 }
 
@@ -117,9 +125,18 @@ function review_lives(lifes_player, lifes_enemy){
   } else if(lifes_player == 0) {
     show_winner("lose");
   } 
+
 }
 
 function selectionPetPlayer(){
+
+  //Now we are going to hide the hide pet section.
+  let sectionSelectPet = document.getElementById("selection_pet"); 
+  sectionSelectPet.style.display = "none"; //show elements
+
+  //show section of selection power
+  let sectionSelectAttacking = document.getElementById("selection_power"); 
+  sectionSelectAttacking.style.display = "block"; //show elements
 
   let a = 'hipodoge', b = 'capipepo', c = 'ratigueya';
   let petHipodoge = document.getElementById(a);
@@ -141,6 +158,7 @@ function selectionPetPlayer(){
 }
 
 function selectionPetEnemy(){
+
   let random_number = selectionRandom(1, 3);
   let spanPetEnemy = document.getElementById("pet_enemy");
 
