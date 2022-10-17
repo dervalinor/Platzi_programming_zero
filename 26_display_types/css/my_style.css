@@ -1,0 +1,42 @@
+h1 {
+  color: #C493FF;
+}
+
+.pet {
+  color: #FFC75F;
+}
+
+#choose_pet {
+  color: #F9F871;
+  width: 300px;
+  height: 50px;
+}
+
+/*In css we have different display types: block, inline and inline-block 
+
+Display block: occupy the entire length of the document
+Display inline: only occupies a portion of the document
+ 
+ */
+
+h1 { /*h1 default is display: block */
+  background: #42EDD3;
+  opacity: 0.3;
+}
+
+/*the default labels are inline display */
+label {
+  background: #A83AF5;
+  /*width and height are not work when the element is inline */
+  width: 80;
+  height: 60px;
+  opacity: .6;
+}
+
+/*inputs and button are inline-block, has both block and inline features */
+input {
+  /*only occupies a portion of the document but we can modify the
+  width and height */
+  width: 15px;
+  height: 15px;
+}

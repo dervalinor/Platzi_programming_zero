@@ -1,0 +1,29 @@
+/*Our html tags are like boxes, for example the box model takes care of label spacing and edges 
+
+A html tags have:
+
+- content
+- padding: distance between the contents and the edge of the box
+- border
+- margin: distance between boxes of html
+
+*/
+
+h1 {
+  color: #C493FF;
+}
+
+#selection_pet {
+  display: flex;
+  /*center content */
+  justify-content: center;
+  align-items: center;
+  /*we can change direction of the elements */
+  flex-direction: column;
+  height: 100%; /*occupy the entire vertical space */
+}
+
+.tag_mokepon {
+  width: 100px;
+  height: 30px;
+}
