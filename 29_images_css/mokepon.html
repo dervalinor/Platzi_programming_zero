@@ -9,8 +9,7 @@
     <link  rel = "icon" href="https://i.imgur.com/qTAJfv6.jpg"> 
     <link rel = "stylesheet" type = "text/css" href = "../style/style.css"> 
     <link rel = "stylesheet" type = "text/css" href = "./css/my_style.css">
-
-    <script src="js/videogame.js"></script> 
+     <script src="js/videogame.js"></script> 
 
   </head>
 
@@ -20,10 +19,11 @@
     <div> <!--The div tag is a parent element because it contains 
     other dento elements such as h1, p, input, etc. -->
       <section id = "selection_pet">
-        <h2 id = "choose_pet">Choose your pet: </h2>
-        
-            <h1>Mokepon! </h1> 
-
+        <h1 class="title">Mokepon!</h1> 
+        <h2 id = "choose_pet" class="subtitle">Choose your pet: </h2>
+      
+    
+          <div class="card">
             <label for="hipodoge" class = "pet">Hipodoge </label>
             <input type = "radio" name = "pets" id = "hipodoge"> 
 
@@ -32,8 +32,9 @@
 
             <label for="ratigueya" class = "pet">Ratigueya</label>
             <input type = "radio" name = "pets" id = "ratigueya"> 
+          </div>
 
-            <button id = "boton-pets">Select</button> 
+          <button id = "boton-pets"><b>Select</b></button> 
       </section>
 
       <section id = "selection_power"> 
