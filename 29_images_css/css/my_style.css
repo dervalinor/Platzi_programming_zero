@@ -1,5 +1,5 @@
 /*
-create a page layout where you have a title, subtitle, images of the Mokepones and selection buttons.
+create a page layout where you have a title, subtitle, images of the Mokepones with their names and selection buttons.
 
 Use AI create images
 */
@@ -19,8 +19,7 @@ i font-family: 'Lobster Two', cursive;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  height: 100%; 
+  align-items: center; 
 }
 
 .title {
@@ -30,14 +29,12 @@ i font-family: 'Lobster Two', cursive;
   /*justify-content: It defines the alignment along the main axis */
   justify-content: center;
 
-  /*align-items: That horizontal flow is the main axis, so align-items is the 
-alignment opposite that, on the vertical axis */
+  /*align-items: That horizontal flow is the main axis, so align-items is the  alignment opposite that, on the vertical axis */
   align-items: center;
-
   color: #3AF178;
   width: 310px;
   height: 50px;
-  font-size: 4em;
+  font-size: 5em;
 }
 
 .subtitle {
@@ -60,17 +57,20 @@ alignment opposite that, on the vertical axis */
   margin: 10px; 
   padding: 5px;
   border: 3px solid #78F0EC;
+   /*Border-radius: small rounding of the border */
+  border-radius: 20px;
 }
 
 
 #boton-pets {
-  height: 30px;
-  width: 120px;
+  height: 40px;
+  width: 300px;
   font-size: 1.4em; /*The font-size property sets the size of the text.*/
-  background: #32F393;
-  border: 2px solid #BEF728; 
+  background: #17C4A5;
+  border: 2px solid #1CD877; 
   color: #D3EFF1;
   margin: 30px;
+  border-radius: 20px;
 }
 
 input {
