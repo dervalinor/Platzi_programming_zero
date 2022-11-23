@@ -49,10 +49,11 @@ i font-family: 'Lobster Two', cursive;
 
 .pet {
   display: flex; 
-  justify-content: center;
+  justify-content: center; /*center x*/
+  align-items: center;/*center y */
   font-size: 20px;
   width: 200px;
-  height: 180px;
+  height: 120px;
   background: #14D0F6;
   margin: 10px; 
   padding: 5px;
@@ -71,6 +72,13 @@ i font-family: 'Lobster Two', cursive;
   color: #D3EFF1;
   margin: 30px;
   border-radius: 20px;
+}
+
+/*Modify size of our Mokepones*/
+.pet img {
+  height: 100px;
+  padding: 15px;
+  border-radius: 30px;
 }
 
 input {
